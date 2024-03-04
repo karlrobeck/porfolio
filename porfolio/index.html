@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="./static/output.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="">
-    <main x-data="{sidebar:false}" class="h-screen w-screen flex">
-        <aside x-show="sidebar" class="w-1/4 mr-4 border p-4">
+<body>
+    <main x-data="{sidebar:false}" class="h-screen w-screen flex relative">
+        <aside x-show="sidebar" class="h-screen w-1/4 mr-4 border p-4">
             im sidebar
         </aside>
-        <div class="w-full">
+        <div class="h-full w-full">
             <header class="w-full">
                 <nav class="navbar bg-base-100 shadow-md rounded-b-md px-4">
                     <div class="w-full space-x-4">
@@ -43,11 +43,11 @@
                     </ul>
                 </nav>
             </header>
-            <article class="p-4">
+            <article class="p-4 space-y-5">
                 <!--Hero section-->
-                <section class="h-screen flex flex-col justify-center items-center gap-5">
+                <section class="p-4 h-screen flex flex-col justify-center items-center gap-5 border-b ">
                     <h1 class="text-5xl font-bold">Let's make it simple</h1>
-                    <ul class="menu menu-horizontal bg-base-200 rounded-box">
+                    <ul class="menu menu-vertial md:menu-horizontal bg-base-200 rounded-box">
                         <li>
                             <a href="">
                                 <img class="w-8 h-8" src="https://www.svgrepo.com/show/452091/python.svg" alt="">
@@ -72,10 +72,138 @@
                                 <span>Javascript</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="">
+                                <img class="w-8 h-8" src="https://www.svgrepo.com/show/303369/amazon-web-services-logo.svg" alt="">
+                                <span>Amazon Web services</span>
+                            </a>
+                        </li>
                     </ul>
                 </section>
+                <section class="p-4 h-screen grid grid-cols-2 place-content-center">
+                    <div class="space-y-3">
+                        <h2 class="text-4xl font-bold">Who am I?</h2>
+                        <p>Hello, my name is Karl Robeck Alferez. I am a Fullstack Developer specializing in creation of web system. from frontend system using react, sveltekit, jinja2. API development using my custom API Framework called <a class="underline" target="_blank" href="https://github.com/Po-key/pypox">Pypox</a>. I also know how to develop in FastAPI, Starlette and any ASGI compatible system.</p>
+                        <p>I also know how do create <b>SQL/NOSQL</b> databases. specifically <b><i>SQLITE</i></b> for SQL and <b><i>DynamoDB</i></b> for NOSQL</p>
+                    </div>
+                    <div class="h-full w-full">
+                        <div class="chat chat-start">
+                            <div class="chat-image avatar">
+                                <div class="w-10 rounded-full">
+                                <img src="https://www.svgrepo.com/show/262670/manager-boss.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="chat-header">
+                                Boss
+                                <time class="text-xs opacity-50">12:45</time>
+                            </div>
+                            <div class="chat-bubble">Hey, I need something</div>
+                            <div class="chat-footer opacity-50">
+                                Delivered
+                            </div>
+                            </div>
+                            <div class="chat chat-end">
+                            <div class="chat-image avatar">
+                                <div class="w-10 rounded-full">
+                                <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/425990611_1258375875123234_2393284042331025647_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEfRs4Wsfs0kJHOFXNfjLSKvVKF5vYsf_m9UoXm9ix_-ZSgThGQoxcx0t9AcWZN0aCZ8oDTOujmC7iAVoXbFP4p&_nc_ohc=ZwzjaZps-70AX9vtceY&_nc_oc=AQnmo8nprDY7ge-Z_AMqI5DMvrJtU7iExnGkAaYkCtY7vzsoXBCZggNcFK9Mzh0GStwZ5avQJIotip1BUm8OAgIE&_nc_ht=scontent.fmnl4-4.fna&oh=00_AfDt6WbMWkY_SBSjSm3Tu6VHc1he3P5jEB5x5U2DW015qg&oe=65EA5430" alt="">
+                                </div>
+                            </div>
+                            <div class="chat-header">
+                                Robeck
+                                <time class="text-xs opacity-50">12:46</time>
+                            </div>
+                            <div class="chat-bubble">I got it 😎</div>
+                            <div class="chat-footer opacity-50">
+                                Seen at 12:46
+                            </div>
+                            </div>
+                    </div>                    
+                </section>
+                <section class="p-4 flex flex-col justify-center items-center gap-5">
+                    <h2 class="text-xl font-bold">Programming Language Roadmap from 2020 to 2024</h2>
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-start timeline-box">MQL4</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li>
+                            <hr/>
+                            <div class="timeline-start timeline-box">MQL5</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li>
+                            <hr/>
+                            <div class="timeline-start timeline-box">C++</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li>
+                            <hr/>
+                            <div class="timeline-start timeline-box">Python</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li>
+                            <hr/>
+                            <div class="timeline-start timeline-box">Java</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li>
+                            <hr/>
+                            <div class="timeline-start timeline-box">Javascript</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li>
+                            <hr/>
+                            <div class="timeline-start timeline-box">C#</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li>
+                            <hr/>
+                            <div class="timeline-start timeline-box">Android Java</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li>
+                            <hr/>
+                            <div class="timeline-start timeline-box">Rust Lang</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <hr/>
+                        </li>
+                        <li>
+                            <hr/>
+                            <div class="timeline-start timeline-box">AWS Web Services</div>
+                            <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                            </div>
+                        </li>
+                        </ul>
+                </section>
             </article>
-            <footer></footer>
+            <footer>Footer</footer>
         </div>
     </main>
 </body>
