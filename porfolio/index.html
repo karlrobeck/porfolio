@@ -8,246 +8,283 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
-    <main x-data="{sidebar:false}" class="h-screen w-screen flex relative">
-        <aside x-show="sidebar" class="h-screen w-1/4 mr-4 border p-4">
-            im sidebar
-        </aside>
-        <div class="h-full w-full">
-            <header class="w-full">
-                <nav class="navbar bg-base-100 shadow-md rounded-b-md px-4">
-                    <div class="w-full space-x-4">
-                        <button x-on:click="sidebar = !sidebar" class="btn btn-outline">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+    <main class="h-screen w-screen flex flex-col relative">
+        <header class="w-full">
+            <nav class="navbar bg-base-100 shadow-md rounded-b-md px-4">
+                <div class="w-full space-x-4">
+                    <span class="navbar-start text-xl font-bold">Porfolio / Robeck</span>
+                </div>
+                <ul class="flex navbar-end">
+                    <li class="p-4">
+                        <a target="_blank" aria-label="facebook account" class="btn btn-outline" href="https://www.facebook.com/karlrobeck.alferez">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
                             </svg>
-                        </button>
-                        <span class="navbar-start text-xl font-bold">Porfolio / Robeck</span>
-                    </div>
-                    <ul class="flex navbar-end">
-                        <li class="p-4">
-                            <a target="_blank" aria-label="facebook account" class="btn btn-outline" href="https://www.facebook.com/karlrobeck.alferez">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                                </svg>
-                                <span>Facebook</span>
-                            </a>
-                        </li>
-                        <li class="p-4">
-                            <a target="_blank" aria-label="github account" class="btn btn-outline" href="https://github.com/karlrobeck">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                                </svg>
-                                <span>Github</span>
-                            </a>
-                        </li>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li class="p-4">
+                        <a target="_blank" aria-label="github account" class="btn btn-outline" href="https://github.com/karlrobeck">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                            <span>Github</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article class="p-4 space-y-5">
+            <!--Hero section-->
+            <section class="p-4 h-screen flex flex-col justify-center items-center gap-5 border-b">
+                <h1 class="text-5xl font-bold">Let's make it simple</h1>
+                <ul class="menu menu-vertial md:menu-horizontal bg-base-200 rounded-box">
+                    <li>
+                        <a href="">
+                            <img class="w-8 h-8" src="https://www.svgrepo.com/show/452091/python.svg" alt="">
+                            <span>Python</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="w-8 h-8" src="https://www.svgrepo.com/show/512317/github-142.svg" alt="">
+                            <span>Github Actions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="w-8 h-8" src="https://www.svgrepo.com/show/473669/jinja.svg" alt="">
+                            <span>Jinja2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="w-8 h-8" src="https://www.svgrepo.com/show/349419/javascript.svg" alt="">
+                            <span>Javascript</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="w-8 h-8" src="https://www.svgrepo.com/show/303369/amazon-web-services-logo.svg" alt="">
+                            <span>Amazon Web services</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="p-4 h-screen grid grid-cols-2 place-content-center">
+                <div class="space-y-3">
+                    <h2 class="text-4xl font-bold">Who am I?</h2>
+                    <p>Hello, my name is Karl Robeck Alferez. I am a Fullstack Developer specializing in creation of web system. from frontend system using react, sveltekit, jinja2. API development using my custom API Framework called <a class="underline" target="_blank" href="https://github.com/Po-key/pypox">Pypox</a>. I also know how to develop in FastAPI, Starlette and any ASGI compatible system.</p>
+                    <p>I also know how do create <b>SQL/NOSQL</b> databases. specifically <b><i>SQLITE</i></b> for SQL and <b><i>DynamoDB</i></b> for NOSQL</p>
+                </div>
+                <div class="h-full w-full">
+                    <div class="chat chat-start">
+                        <div class="chat-image avatar">
+                            <div class="w-10 rounded-full">
+                            <img src="https://www.svgrepo.com/show/262670/manager-boss.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="chat-header">
+                            Boss
+                            <time class="text-xs opacity-50">12:45</time>
+                        </div>
+                        <div class="chat-bubble">Hey, I need something</div>
+                        <div class="chat-footer opacity-50">
+                            Delivered
+                        </div>
+                        </div>
+                        <div class="chat chat-end">
+                        <div class="chat-image avatar">
+                            <div class="w-10 rounded-full">
+                            <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/425990611_1258375875123234_2393284042331025647_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEfRs4Wsfs0kJHOFXNfjLSKvVKF5vYsf_m9UoXm9ix_-ZSgThGQoxcx0t9AcWZN0aCZ8oDTOujmC7iAVoXbFP4p&_nc_ohc=ZwzjaZps-70AX9vtceY&_nc_oc=AQnmo8nprDY7ge-Z_AMqI5DMvrJtU7iExnGkAaYkCtY7vzsoXBCZggNcFK9Mzh0GStwZ5avQJIotip1BUm8OAgIE&_nc_ht=scontent.fmnl4-4.fna&oh=00_AfDt6WbMWkY_SBSjSm3Tu6VHc1he3P5jEB5x5U2DW015qg&oe=65EA5430" alt="">
+                            </div>
+                        </div>
+                        <div class="chat-header">
+                            Robeck
+                            <time class="text-xs opacity-50">12:46</time>
+                        </div>
+                        <div class="chat-bubble">I got it 😎</div>
+                        <div class="chat-footer opacity-50">
+                            Seen at 12:46
+                        </div>
+                        </div>
+                </div>                    
+            </section>
+            <section class="p-4 flex flex-col justify-center items-center gap-5">
+                <h2 class="text-xl font-bold">Programming Language Roadmap from 2020 to 2024</h2>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-start timeline-box">MQL4</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">MQL5</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">C++</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">Python</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">Java</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">Javascript</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">SQL</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">C#</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">Android Java</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">Rust Lang</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <hr/>
+                        <div class="timeline-start timeline-box">AWS Web Services</div>
+                        <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+                    </li>
                     </ul>
-                </nav>
-            </header>
-            <article class="p-4 space-y-5">
-                <!--Hero section-->
-                <section class="p-4 h-screen flex flex-col justify-center items-center gap-5 border-b">
-                    <h1 class="text-5xl font-bold">Let's make it simple</h1>
-                    <ul class="menu menu-vertial md:menu-horizontal bg-base-200 rounded-box">
-                        <li>
-                            <a href="">
-                                <img class="w-8 h-8" src="https://www.svgrepo.com/show/452091/python.svg" alt="">
-                                <span>Python</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img class="w-8 h-8" src="https://www.svgrepo.com/show/512317/github-142.svg" alt="">
-                                <span>Github Actions</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img class="w-8 h-8" src="https://www.svgrepo.com/show/473669/jinja.svg" alt="">
-                                <span>Jinja2</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img class="w-8 h-8" src="https://www.svgrepo.com/show/349419/javascript.svg" alt="">
-                                <span>Javascript</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img class="w-8 h-8" src="https://www.svgrepo.com/show/303369/amazon-web-services-logo.svg" alt="">
-                                <span>Amazon Web services</span>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="p-4 h-screen grid grid-cols-2 place-content-center">
-                    <div class="space-y-3">
-                        <h2 class="text-4xl font-bold">Who am I?</h2>
-                        <p>Hello, my name is Karl Robeck Alferez. I am a Fullstack Developer specializing in creation of web system. from frontend system using react, sveltekit, jinja2. API development using my custom API Framework called <a class="underline" target="_blank" href="https://github.com/Po-key/pypox">Pypox</a>. I also know how to develop in FastAPI, Starlette and any ASGI compatible system.</p>
-                        <p>I also know how do create <b>SQL/NOSQL</b> databases. specifically <b><i>SQLITE</i></b> for SQL and <b><i>DynamoDB</i></b> for NOSQL</p>
+            </section>
+            <section class="p-4 h-screen flex flex-col justify-center items-center gap-5 border-b">
+                <h2 class="text-xl font-bold">
+                    Major Projects
+                </h2>
+                <div class="flex gap-3">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="px-10 pt-10">
+                            <img src="https://www.svgrepo.com/show/505159/banana.svg" alt="Shoes" class="rounded-xl h-64 w-64" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Banana Classroom</h2>
+                            <p>A fullstack web application built in pypox</p>
+                            <div class="card-actions">
+                            <button class="btn btn-info">Active Development</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="h-full w-full">
-                        <div class="chat chat-start">
-                            <div class="chat-image avatar">
-                                <div class="w-10 rounded-full">
-                                <img src="https://www.svgrepo.com/show/262670/manager-boss.svg" alt="">
-                                </div>
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="px-10 pt-10">
+                            <img src="https://www.svgrepo.com/show/288426/server-database.svg" alt="Shoes" class="rounded-xl h-64 w-64" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Pypox</h2>
+                            <p>An ASGI Framework designed to build API Services on the fly</p>
+                            <div class="card-actions">
+                            <button class="btn btn-success">Active Development</button>
                             </div>
-                            <div class="chat-header">
-                                Boss
-                                <time class="text-xs opacity-50">12:45</time>
+                        </div>
+                    </div>
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="px-10 pt-10">
+                            <img src="https://www.svgrepo.com/show/529861/server-square-cloud.svg" alt="Shoes" class="rounded-xl h-64 w-64" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Unnamed Project</h2>
+                            <p>A backend as a service system that uses Pypox under the hood</p>
+                            <div class="card-actions">
+                            <button class="btn btn-info">Coming soon</button>
                             </div>
-                            <div class="chat-bubble">Hey, I need something</div>
-                            <div class="chat-footer opacity-50">
-                                Delivered
-                            </div>
-                            </div>
-                            <div class="chat chat-end">
-                            <div class="chat-image avatar">
-                                <div class="w-10 rounded-full">
-                                <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/425990611_1258375875123234_2393284042331025647_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEfRs4Wsfs0kJHOFXNfjLSKvVKF5vYsf_m9UoXm9ix_-ZSgThGQoxcx0t9AcWZN0aCZ8oDTOujmC7iAVoXbFP4p&_nc_ohc=ZwzjaZps-70AX9vtceY&_nc_oc=AQnmo8nprDY7ge-Z_AMqI5DMvrJtU7iExnGkAaYkCtY7vzsoXBCZggNcFK9Mzh0GStwZ5avQJIotip1BUm8OAgIE&_nc_ht=scontent.fmnl4-4.fna&oh=00_AfDt6WbMWkY_SBSjSm3Tu6VHc1he3P5jEB5x5U2DW015qg&oe=65EA5430" alt="">
-                                </div>
-                            </div>
-                            <div class="chat-header">
-                                Robeck
-                                <time class="text-xs opacity-50">12:46</time>
-                            </div>
-                            <div class="chat-bubble">I got it 😎</div>
-                            <div class="chat-footer opacity-50">
-                                Seen at 12:46
-                            </div>
-                            </div>
-                    </div>                    
-                </section>
-                <section class="p-4 flex flex-col justify-center items-center gap-5">
-                    <h2 class="text-xl font-bold">Programming Language Roadmap from 2020 to 2024</h2>
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-start timeline-box">MQL4</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                            <hr/>
-                        </li>
-                        <li>
-                            <hr/>
-                            <div class="timeline-start timeline-box">MQL5</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                            <hr/>
-                        </li>
-                        <li>
-                            <hr/>
-                            <div class="timeline-start timeline-box">C++</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                            <hr/>
-                        </li>
-                        <li>
-                            <hr/>
-                            <div class="timeline-start timeline-box">Python</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                            <hr/>
-                        </li>
-                        <li>
-                            <hr/>
-                            <div class="timeline-start timeline-box">Java</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                            <hr/>
-                        </li>
-                        <li>
-                            <hr/>
-                            <div class="timeline-start timeline-box">Javascript</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                            <hr/>
-                        </li>
-                        <li>
-                            <hr/>
-                            <div class="timeline-start timeline-box">C#</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                            <hr/>
-                        </li>
-                        <li>
-                            <hr/>
-                            <div class="timeline-start timeline-box">Android Java</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                            <hr/>
-                        </li>
-                        <li>
-                            <hr/>
-                            <div class="timeline-start timeline-box">Rust Lang</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                            <hr/>
-                        </li>
-                        <li>
-                            <hr/>
-                            <div class="timeline-start timeline-box">AWS Web Services</div>
-                            <div class="timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                            </div>
-                        </li>
-                        </ul>
-                </section>
-                <section class="p-4 h-screen flex flex-col justify-center items-center gap-5 border-b">
-                    <h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <footer class="p-8 bg-info flex justify-between">
+            <div>
+                <h2 class="font-bold text-xl">Karl Robeck Alferez</h2>
+                <span class="font-light">Full Stack Developer</span>
+                <div class="flex gap-2 py-2">
+                    <a target="_blank" aria-label="github account" class="btn btn-outline" href="https://github.com/karlrobeck">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                        </a>
+                    <a target="_blank" aria-label="facebook account" class="btn btn-outline" href="https://www.facebook.com/karlrobeck.alferez">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <ul class="space-y-2">
+                <li>
+                    <a class="link" href="">
+                        Hero Section
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="">
+                        Programming Languages
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="">
                         Major Projects
-                    </h2>
-                    <div class="flex gap-3">
-                        <div class="card w-96 bg-base-100 shadow-xl">
-                            <figure class="px-10 pt-10">
-                                <img src="https://www.svgrepo.com/show/505159/banana.svg" alt="Shoes" class="rounded-xl h-64 w-64" />
-                            </figure>
-                            <div class="card-body items-center text-center">
-                                <h2 class="card-title">Banana Classroom</h2>
-                                <p>A fullstack web application built in pypox</p>
-                                <div class="card-actions">
-                                <button class="btn btn-info">Active Development</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card w-96 bg-base-100 shadow-xl">
-                            <figure class="px-10 pt-10">
-                                <img src="https://www.svgrepo.com/show/288426/server-database.svg" alt="Shoes" class="rounded-xl h-64 w-64" />
-                            </figure>
-                            <div class="card-body items-center text-center">
-                                <h2 class="card-title">Pypox</h2>
-                                <p>An ASGI Framework designed to build API Services on the fly</p>
-                                <div class="card-actions">
-                                <button class="btn btn-success">Active Development</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card w-96 bg-base-100 shadow-xl">
-                            <figure class="px-10 pt-10">
-                                <img src="https://www.svgrepo.com/show/529861/server-square-cloud.svg" alt="Shoes" class="rounded-xl h-64 w-64" />
-                            </figure>
-                            <div class="card-body items-center text-center">
-                                <h2 class="card-title">Unnamed Project</h2>
-                                <p>A backend as a service system that uses Pypox under the hood</p>
-                                <div class="card-actions">
-                                <button class="btn btn-info">Coming soon</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </article>
-            <footer>Footer</footer>
-        </div>
+                    </a>
+                </li>
+            </ul>
+        </footer>
     </main>
 </body>
 </html>
