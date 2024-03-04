@@ -24,9 +24,13 @@
   },
   "contributors": [],
   "scripts": {
-    "dev": "",
+    "dev": "npx tailwindcss -i ./porfolio/app.pcss -o ./porfolio/static/output.css --watch",
     "test": ""
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "daisyui": "^4.7.2"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.10"
+  }
 }
